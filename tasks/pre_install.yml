@@ -1,0 +1,4 @@
+- name: Prepare wget module
+  apt:
+    name: wget
+    state: present
