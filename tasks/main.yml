@@ -1,12 +1,12 @@
 ---
 # tasks file for Go
-- name: Download Go
+- name: "GO | Download Go"
   shell: wget https://dl.google.com/go/go{{ go_version }}.linux-amd64.tar.gz
   chdir: /tmp
 
-- name: Unpack
+- name: "GO | Install"
   shell: tar -C /usr/local -xzf go{{ go_version }}.linux-amd64.tar.gz
   chdir: /tmp
 
-- name: Load environment variables
+- name: "GO | Load environment variables"
   shell: echo "PATH=$PATH:/usr/local/go/bin" >> /etc/profile
