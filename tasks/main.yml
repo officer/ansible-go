@@ -1,12 +1,2 @@
----
-# tasks file for Go
-- name: "GO | Download Go"
-  shell: wget https://dl.google.com/go/go{{ go_version }}.linux-amd64.tar.gz
-  chdir: /tmp
-
-- name: "GO | Install"
-  shell: tar -C /usr/local -xzf go{{ go_version }}.linux-amd64.tar.gz
-  chdir: /tmp
-
-- name: "GO | Load environment variables"
-  shell: echo "PATH=$PATH:/usr/local/go/bin" >> /etc/profile
+- include: pre_install.yml
+- include: setup.yml

@@ -2,7 +2,4 @@
 # vars file for Go
 
 # Go version to be installed
-go_version: 1.12.7
-
-# URL
-go_url: https://dl.google.com/go/go1.12.7.linux-amd64.tar.gz
+go_version: 1.17.3
